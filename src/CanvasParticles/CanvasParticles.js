@@ -77,9 +77,9 @@ export const CanvasParticles = (props) => {
   const drawParticle = (x, y, r, c, e, b) => {
     // draw only if alive
     if (b) {
-      const grad=contextRef.current.createRadialGradient(x, y, r/4, x, y, r);
+      const grad=contextRef.current.createRadialGradient(x, y, r/10, x, y, r);
       if (e) {
-        const colorInner = 'rgba(' + 240 + ',' + 75 + ',' + 5 + ', 0.5)';
+        const colorInner = 'rgba(' + 240 + ',' + 75 + ',' + 5 + ', 0.8)';
         grad.addColorStop(0, colorInner);
         const colorOutter = 'rgba(' + 181 + ',' + 4 + ',' + 51 + ', 0.1)';
         grad.addColorStop(0.3, colorOutter);
@@ -88,7 +88,7 @@ export const CanvasParticles = (props) => {
       } else {
         const colorInner = 'rgba(' + 253 + ',' + 238 + ',' + 152 + ', 0.8)';
         grad.addColorStop(0, colorInner);
-        const colorOutter = 'rgba(' + 252 + ',' + 178 + ',' + 96 + ', 0.3)';
+        const colorOutter = 'rgba(' + 252 + ',' + 178 + ',' + 96 + ', 0.1)';
         grad.addColorStop(0.3, colorOutter);
         const colorBg = 'rgba(' + 252 + ',' + 178 + ',' + 96 + ', 0)';
         grad.addColorStop(1, colorBg);
